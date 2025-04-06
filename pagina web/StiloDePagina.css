@@ -1,8 +1,8 @@
 body{
-    background-color: black;
+    background-color: #f5f5f5;
 }
 .barraSuperior{
-    background-color: rgba(74, 31, 194, 0.785);
+    background-color: rgba(74, 31, 194, 0.785);/* el rgba sirve para elegir el color con una trasparencia */
     position: sticky;
     top: 0;
     left: 0;
@@ -25,10 +25,9 @@ body{
 .noticias{
     background-color:  #e9d7a95c;
     display: grid;
-    place-items: center;
-    margin-top: 10px
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
     
-
 }
 .noticias1{
     background-color: aliceblue;
@@ -36,7 +35,12 @@ body{
    place-items: center;
    border-radius: 25px;
    margin-top: 25px;
+   transition: background-color 0.5s, color 0.5s;/*sirver para suavisar el cambio de color */
 }
+.noticias1:hover{
+background-color: black;
+color: white;
+}/* el hover sirve para */
 h2{
     text-align: center;
 }
@@ -46,4 +50,21 @@ h2{
 video{
     align-items: center;
 
+}
+p{
+    max-width: ;
+}
+img{
+    width: 360px;
+}
+a{
+    color: black;
+}
+a:hover{
+    font-weight: bold;
+    text-decoration: none;
+}
+footer{
+    color: #31231e;
+    background-color: #c9d2d0;
 }
