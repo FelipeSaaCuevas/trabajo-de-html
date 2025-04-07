@@ -20,19 +20,21 @@ body{
 }
 .titulo{
     text-align: center;
+
     color: #d5d5d5;
 }
 .noticias{
     background-color:  #e9d7a95c;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    top: auto;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     gap: 10px;
     
 }
 .noticias1{
     background-color: aliceblue;
-    width: 90%;
-   place-items: center;
+    width: auto;
+  gap: 30px;
    border-radius: 25px;
    margin-top: 25px;
    transition: background-color 0.5s, color 0.5s;/*sirver para suavisar el cambio de color */
@@ -52,7 +54,7 @@ video{
 
 }
 p{
-    max-width: ;
+    
 }
 img{
     width: 360px;
@@ -67,4 +69,9 @@ a:hover{
 footer{
     color: #31231e;
     background-color: #c9d2d0;
+}
+h2{
+    width: 100%;
+    height:80px
+    
 }
