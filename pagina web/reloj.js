@@ -43,18 +43,3 @@ form.addEventListener('submit', function(e) {
   }
 }); 
 //////////////////////////////
-<script>
-  const contenedor = document.getElementById('listaArticulos');
-    const articulos = JSON.parse(localStorage.getItem('idex')) || [];
-
-    if () {
-    
-      articulos.forEach(articulo => {
-        <article class="noticias1">
-      <h2>${titulo}</h2>
-      <p>${descripcion}</p>
-      </article> 
-        ;
-        contenedor.innerHTML += articuloHTML;
-      });
-    }

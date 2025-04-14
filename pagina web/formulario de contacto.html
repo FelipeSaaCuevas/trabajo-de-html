@@ -15,6 +15,7 @@
             <a href="idex.html">Inicio</a>
             <a href="deporte.html">Deporte</a>
             <a href="negocios.html">Negocios</a>
+            <a href="formulario de contacto.html">formulario de contacto</a>
         </nav>
     </header>
 
@@ -30,16 +31,12 @@
         
             <button type="submit">Enviar</button>
         </form>
-
-        <!-- Aquí se mostrarán los datos -->
         <div id="resultado"></div>
     </div>
 
     <script>
         const formulario = document.getElementById('formularioContacto');
         const resultadoDiv = document.getElementById('resultado');
-
-        // Mostrar datos si existen en localStorage
         function mostrarDatosGuardados() {
             const nombreGuardado = localStorage.getItem('nombre');
             const mensajeGuardado = localStorage.getItem('mensaje');
@@ -47,7 +44,7 @@
             if (nombreGuardado && mensajeGuardado) {
                 
                 resultadoDiv.innerHTML = `
-                    <h3>Datos guardados:</h3>
+                    <h2>datos guardados:</h2>
                     <p><strong>Nombre:</strong> ${nombreGuardado}</p>
                     <p><strong>Mensaje:</strong> ${mensajeGuardado}</p>
                 `;
@@ -59,11 +56,7 @@
 
             }
         }
-
-        // Ejecutar al cargar la página
         mostrarDatosGuardados();
-
-        // Guardar en localStorage al enviar
         formulario.addEventListener('submit', function(e) {
             e.preventDefault();
 
