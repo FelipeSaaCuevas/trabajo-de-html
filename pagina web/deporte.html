@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="reloj.js">
 <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <title>Deporte</title><link rel="stylesheet" href="StiloDePagina.css">
 </head>
@@ -12,12 +13,28 @@
     <header class="barraSuperior">
         <h1 class="titulo">El Faro</h1> 
         <img src="imagenes/logo de faro.webp" alt="" class="logo">
+       <div id="hora"></div>
         <nav class="menu">
             <a href="idex.html">Inicio</a>
             <a href="deporte.html">Deporte</a>
             <a href="negocios.html">Negocios</a>
         </nav>
     </header>
+    <div id="arti">
+        <h2>Agregar nuevo artículo</h2>
+        <form id="formArticulo">
+           <div class="descripcion">
+          <label for="titulo">Título del artículo:</label>
+          <input type="text" id="titulo" required>
+          
+          <label for="descripcion">Descripción del artículo:</label>
+          <textarea id="descripcion"  rows="4" required class="descripcion"></textarea>
+          
+          <button type="submit">Agregar artículo</button>
+        </div>
+        </form>
+        <button onclick="mostrarOcultar()">Mostrar/Ocultar formulario</button>
+    </div>
     <h2>Deporte</h2>
     <div class="noticias">
         
@@ -97,6 +114,17 @@
             </li>
         </ol>
     </footer>
-   
+    <button onclick="mostrarOcultar()">Mostrar/Ocultar formulario</button>
+   <script src="reloj.js"></script>
+   <script>
+    function mostrarOcultar() {
+    const arti = document.getElementById('arti');
+    if (arti.style.display === 'none' || arti.style.display === '') {
+      arti.style.display = 'block';
+    } else {
+      arti.style.display = 'none';
+    }
+  }
+   </script>
 </body>
 </html>

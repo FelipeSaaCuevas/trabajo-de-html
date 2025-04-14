@@ -10,24 +10,41 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
+    <a href="prueva.html">formulario de articulo</a>
     <header class="barraSuperior">
         
         <h1 class="titulo">El Faro</h1> 
         <img src="imagenes/logo de faro.webp" alt="" class="logo">
+        <div id="hora"></div>
         <nav class="menu" style="color: red;">
             <a href="idex.html">Inicio</a>
             <a href="deporte.html">Deporte</a>
             <a href="negocios.html">Negocios</a>
         </nav>
     </header>
+    <div id="arti">
+        <h2>Agregar nuevo artículo</h2>
+        <form id="formArticulo">
+           <div class="descripcion">
+          <label for="titulo">Título del artículo:</label>
+          <input type="text" id="titulo" required>
+          
+          <label for="descripcion">Descripción del artículo:</label>
+          <textarea id="descripcion"  rows="4" required class="descripcion"></textarea>
+          
+          <button type="submit">Agregar artículo</button>
+        </div>
+        </form>
+        <button onclick="mostrarOcultar()">Mostrar/Ocultar formulario</button>
+    </div>
     <h2>noticias</h2> 
-    <div class="noticias">
+    <div class="noticias" id="listaArticulos">
         
         <article class="noticias1">
             <h1>Encuentran cadáver de hombre en sector El Arenal de Valdivia</h1>
             <br>
             
-            <video src="" controls style="" ></video>
+            <video src="" controls  ></video>
             <img src="imagenes/social-encuentran-cadaver-valdivia.jpg" alt="">
             <p>
                 Una serie de diligencias se desarrollan este lunes en el sector El Arenal de Valdivia, en la región de Los Ríos, a causa del hallazgo de un cadáver.
@@ -53,7 +70,7 @@ Es por ello que de momento no es posible definir la identidad del fallecido.
         <article class="noticias1">
             <h1>Chilena se certifica como guía extrema en Finlandia: "Supe de inmediato que era el lugar adecuado"</h1>
             <br>
-            <video src="" controls style=""></video>
+            <video src="" controls ></video>
             <p>
                 Catherine Ghersi se convirtió en la primera chilena certificada como guía extrema en Finlandia, quien ahora goza de su propio emprendimiento, rodeada de helados y únicos paisajes a miles de kilómetros de su país natal.
 
@@ -81,7 +98,7 @@ Actualmente, la agencia que dirige la chilena funciona durante todo el año, con
             <h1>Squella condiciona apoyo a Matthei en segunda vuelta: lo entregarán solo si cumple ciertas garantías</h1>
             <br>
             <img src="imagenes/Captura de pantalla 2025-03-31 163536.png" alt="">
-            <video src="" controls style=""></video>
+            <video src="" controls ></video>
             <p>
                 El presidente del Partido Republicano, Arturo Squella, despejó dudas respecto de si apoyarán como conglomerado a Evelyn Matthei, candidata de Chile Vamos, en una eventual segunda vuelta presidencial.
 
@@ -99,6 +116,9 @@ Por último, aclaró que para “nosotros es tan importante que gane alguien dis
             </p>
             <audio src="" controls></audio>
         </article>
+        <div id="listaArticulos">
+            <!-- Aquí se cargarán los artículos -->
+        </div>
     </div>
 <footer>
     <h3>
@@ -122,5 +142,19 @@ Por último, aclaró que para “nosotros es tan importante que gane alguien dis
         </li>
     </ol>
 </footer>
+<script src="reloj.js"></script>
+<button onclick="mostrarOcultar()">Mostrar/Ocultar formulario</button>
+<script>
+function mostrarOcultar() {
+    const arti = document.getElementById('arti');
+    if (arti.style.display === 'none' || arti.style.display === '') {
+      arti.style.display = 'block';
+    } else {
+      arti.style.display = 'none';
+    }
+  }
+</script>
+
+
 </body>
 </html>
