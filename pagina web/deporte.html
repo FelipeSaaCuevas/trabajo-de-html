@@ -5,9 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="reloj.js">
 <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <title>Deporte</title><link rel="stylesheet" href="StiloDePagina.css">
+    <title>Deporte</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+    <link rel="stylesheet" href="StiloDePagina.css">
+
 </head>
 <body>
     <header class="barraSuperior">
@@ -21,6 +23,7 @@
             <a href="formulario de contacto.html">formulario de contacto</a>
         </nav>
     </header>
+    <div id="contenedorAviso"></div>
     <div id="arti">
         <h2>Agregar nuevo artículo</h2>
         <form id="formArticulo">
@@ -37,9 +40,14 @@
         <button onclick="mostrarOcultar()">Mostrar/Ocultar formulario</button>
     </div>
     <h2>Deporte</h2>
-    <div class="noticias">
+    
+        <div class="cell" id="articuloDestacado"></div>
+    <div class="cell" id="listaArticulos">
+        <div class="box" id="listaArticulos">
+            <!-- Aquí se cargarán los artículos -->
+        </div>
         
-        <article class="noticias1">
+        <article class="box">
             <h1>Pellegrini eufórico: Rompió su "maleficio" en el derbi contra el Sevilla y el Betis sigue con su extraordinaria racha en la Liga</h1>
             <br>
             <h2>Deporte</h2>
@@ -57,7 +65,7 @@
             </p>
             <audio src="" controls></audio>
         </article>        
-        <article class="noticias1">
+        <article class="box">
             <h1>
             La opinión de Arturo Vidal sobre la continuidad de Ricardo Gareca al frente de la selección
             </h1>
@@ -72,7 +80,7 @@
             </p>
             <audio src="" controls>a</audio>
         </article>        
-        <article class="noticias1">
+        <article class="box">
             <h1>El tremendo escándalo que remece a la gimnasia y al Comité Olímpico de Italia</h1>
             <br>
             <img src="imagenes/file_20250330122837.jpg" alt="">
@@ -88,44 +96,39 @@
         </article>
     </div>
     <footer>
+        <button class="button"><a href="formulario de contacto.html">formulario de contacto</a></button>
         <h3>
             Linkografia
         </h3>
         <ol>
-            <li>
-                <a href="https://www.emol.com/noticias/Deportes/2025/03/30/1162051/escandalo-gimnasia-
-                italiana.html">
-                https://www.emol.com/noticias/Deportes/2025/03/30/1162051/escandalo-gimnasia-
-                italiana.html
+            <li class="column">
+                <a href="https://www.emol.com/noticias/Economia/2025/03/28/1161943/economia-consumidores-chile.html">
+                    https://www.emol.com/noticias/Economia/2025/03/28/1161943/economia-consumidores-
+                    chile.html
+                </a>
+            </li>
+            <li class="column">
+                <a href="https://www.emol.com/noticias/Economia/2025/03/28/1161944/dolar-mercado-cambiario-
+                local.html">
+                https://www.emol.com/noticias/Economia/2025/03/28/1161944/dolar-mercado-cambiario-
+                local.html
+                </a>
+            </li>
+            <li class="column">
+                <a href="https://www.emol.com/noticias/Economia/2025/03/28/1161930/codelco-resultados-2024.html">
+                    https://www.emol.com/noticias/Economia/2025/03/28/1161930/codelco-resultados-2024.html
                 </a>
             </li>
             <li>
-                <a href="https://www.emol.com/noticias/Deportes/2025/03/30/1162070/manuel-pellegrini-betis-
-                sevilla-goles.html">
-                https://www.emol.com/noticias/Deportes/2025/03/30/1162070/manuel-pellegrini-betis-
-                sevilla-goles.html
+                <a href="https://www.freecodecamp.org/espanol/news/tamano-de-fuente-html-como-cambiar-el-tamano-del-texto-usando-el-estilo-css-en-linea/">
+                    https://www.freecodecamp.org/espanol/news/tamano-de-fuente-html-como-cambiar-el-tamano-del-texto-usando-el-estilo-css-en-linea/
                 </a>
-            </li>
-            <li>
-                <a href="https://www.emol.com/noticias/Deportes/2025/03/30/1162070/manuel-pellegrini-betis-
-                sevilla-goles.html">
-                https://www.emol.com/noticias/Deportes/2025/03/30/1162070/manuel-pellegrini-betis-
-                sevilla-goles.html
-                </a>
-            </li>
+            </li class="column">
         </ol>
     </footer>
     <button onclick="mostrarOcultar()">Mostrar/Ocultar formulario</button>
    <script src="reloj.js"></script>
-   <script>
-    function mostrarOcultar() {
-    const arti = document.getElementById('arti');
-    if (arti.style.display === 'none' || arti.style.display === '') {
-      arti.style.display = 'block';
-    } else {
-      arti.style.display = 'none';
-    }
-  }
-   </script>
+   <script src="agregar.js"></script>
+   <script src="mostrar.js"></script>
 </body>
 </html>

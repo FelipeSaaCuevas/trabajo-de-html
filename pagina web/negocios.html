@@ -7,10 +7,11 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <title>Negocios</title><link rel="stylesheet" href="StiloDePagina.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
 </head>
 <body>
     <header class="barraSuperior">
-        <h1 class="titulo">El Faro</h1> 
+        <h1 class="title">El Faro</h1> 
         <img src="imagenes/logo de faro.webp" alt="" class="logo">
         <div id="hora"></div>
         <nav class="menu">
@@ -20,7 +21,9 @@
             <a href="formulario de contacto.html">formulario de contacto</a>
         </nav>
     </header>
-    <div id="arti">
+    <div id="contenedorAviso"></div>
+    </div>
+    <div class="cell" id="arti">
         <h2>Agregar nuevo artículo</h2>
         <form id="formArticulo">
            <div class="descripcion">
@@ -36,9 +39,14 @@
         <button onclick="mostrarOcultar()">Mostrar/Ocultar formulario</button>
     </div>
     </div>
-    <div class="noticias">
+    
         <h2>negocios</h2>
-        <article class="noticias1">
+        <div id="articuloDestacado"></div>
+    <div class="cell" id="listaArticulos">
+        <div  id="listaArticulos">
+            <!-- Aquí se cargarán los artículos -->
+        </div>
+        <article class="box">
             <h1>
                 Confianza de consumidores chilenos cae con fuerza en marzo y solo un 28% cree que la economía mejorará
             </h1>
@@ -54,7 +62,7 @@
             </p>
             <audio src="" controls></audio>
         </article>        
-        <article class="noticias1">
+        <article class="box">
             <h1>
                 Dólar se dispara y cierra la semana sobre los $950 ante incertidumbre por aranceles de Trump e impacto del desempleo
             </h1>
@@ -68,7 +76,7 @@
             </p>
             <audio src="" controls></audio>
         </article>        
-        <article class="noticias1">
+        <article class="box">
             <h1>
                 Codelco cerró 2024 con leve aumento de producción y un aporte al Fisco de US$1.534 millones empujado por precio del cobre
             </h1>
@@ -93,42 +101,40 @@
             <audio src="" controls></audio>
         </article>
     </div>
-    <footer>
+    <footer class="content">
+        <h3><a href="formulario de contacto.html">formulario de contacto</a></h3>
         <h3>
             Linkografia
         </h3>
-        <ol>
-            <li>
+        <ol >
+            <li class="column">
                 <a href="https://www.emol.com/noticias/Economia/2025/03/28/1161943/economia-consumidores-chile.html">
                     https://www.emol.com/noticias/Economia/2025/03/28/1161943/economia-consumidores-
                     chile.html
                 </a>
             </li>
-            <li>
+            <li class="column">
                 <a href="https://www.emol.com/noticias/Economia/2025/03/28/1161944/dolar-mercado-cambiario-
                 local.html">
                 https://www.emol.com/noticias/Economia/2025/03/28/1161944/dolar-mercado-cambiario-
                 local.html
                 </a>
             </li>
-            <li>
+            <li class="column">
                 <a href="https://www.emol.com/noticias/Economia/2025/03/28/1161930/codelco-resultados-2024.html">
                     https://www.emol.com/noticias/Economia/2025/03/28/1161930/codelco-resultados-2024.html
                 </a>
             </li>
+            <li>
+                <a href="https://www.freecodecamp.org/espanol/news/tamano-de-fuente-html-como-cambiar-el-tamano-del-texto-usando-el-estilo-css-en-linea/">
+                    https://www.freecodecamp.org/espanol/news/tamano-de-fuente-html-como-cambiar-el-tamano-del-texto-usando-el-estilo-css-en-linea/
+                </a>
+            </li class="column">
         </ol>
     </footer>
     <button onclick="mostrarOcultar()">Mostrar/Ocultar formulario</button>
-    <script src="reloj.js"></script>
-    <script>
-        function mostrarOcultar() {
-    const arti = document.getElementById('arti');
-    if (arti.style.display === 'none' || arti.style.display === '') {
-      arti.style.display = 'block';
-    } else {
-      arti.style.display = 'none';
-    }
-  }
-    </script>
+<script src="reloj.js"></script>
+<script src="agregar.js"></script>
+<script src="mostrar.js"></script>
 </body>
 </html>

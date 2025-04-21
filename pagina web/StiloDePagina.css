@@ -23,12 +23,10 @@ body{
 
     color: #d5d5d5;
 }
-.noticias{
+#listaArticulos{
     background-color:  #e9d7a95c;
     display: grid;
-    top: auto;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    gap: 10px;
+    
     
 }
 .noticias1{
@@ -66,6 +64,10 @@ a:hover{
 footer{
     color: #31231e;
     background-color: #c9d2d0;
+    display: block;
+    /*el font-size sirve para cambiar el tamaño del texto*/
+    font-size: x-large; 
+    
 }
 h2{
     width: 100%;
@@ -96,10 +98,20 @@ h2{
     border-radius: 30px;
     
 }
+
+
 .descripcion{
     text-align: center;
     padding-block: 10px;
     padding-block-end: 10px;
     width: 90%;
     height: 500px;
+}
+.noticias1.nuevo {
+    border: 3px solid #007BFF;
+    background-color: #e8f0ff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.3);
+    transition: all 0.5s ease-in-out;
 }

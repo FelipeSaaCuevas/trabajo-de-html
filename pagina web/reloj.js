@@ -13,33 +13,3 @@ function mostrarFechaHora() {
   // Mostrar inmediatamente al cargar
   mostrarFechaHora();
 
-////////////////////////////////////////////7777
-const form = document.getElementById('formArticulo');
-const lista = document.getElementById('listaArticulos');
-
-form.addEventListener('submit', function(e) {
-  e.preventDefault(); // Evita recargar la página
-
-  const titulo = document.getElementById('titulo').value.trim();
-  const descripcion = document.getElementById('descripcion').value.trim();
-
-  if (titulo && descripcion) {
-    const nuevoArticulo = document.createElement('div');
-    nuevoArticulo.classList.add('articulo');
-
-    nuevoArticulo.innerHTML = `
-    <article class="noticias1">
-      <h2>${titulo}</h2>
-      <p>${descripcion}</p>
-    </article> 
-    `;
-
-    lista.appendChild(nuevoArticulo);
-
-    // Limpiar los campos del formulario
-    form.reset();
-  } else {
-    alert('Por favor, completa todos los campos.');
-  }
-}); 
-//////////////////////////////
