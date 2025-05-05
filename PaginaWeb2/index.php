@@ -18,7 +18,7 @@
         <img src="http://localhost/PaginaWeb2/assets/imagenes/logo de faro.webp" alt="" class="logo">
         <div id="hora"></div>
         <nav class="menu" style="color: red;">
-            <a href="http://localhost/PaginaWeb2/index.php">Inicio</a>
+            <a href="C:\Users\HP\Desktop\trabajo de S2 HTML\PaginaWeb2\index,php">Inicio</a>
             <a href="http://localhost/PaginaWeb2/vista/deporte.php">Deporte</a>
             <a href="http://localhost/PaginaWeb2/vista/negocios.php">Negocios</a>
             <a href="http://localhost/PaginaWeb2/vista/login.php">inicio de sesion</a>

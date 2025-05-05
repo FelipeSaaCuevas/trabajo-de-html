@@ -5,6 +5,7 @@ class Usuario {
     public $contrasena;
     public $esEscritor;
     public $articulo;
+    echo articulo[];
 
     public function __construct($nombre, $apellido, $contrasena, $rol) {
         $this->nombre = $nombre;
