@@ -15,4 +15,4 @@ if (mysqli_query($LINK, $sql)) {
     echo "Ha ocurrido un error: " . mysqli_error($LINK);
 }
 $sql = "INSERT INTO articulo (numero_articulo, nombre, articulo) 
-        VALUES (1,'Felipe',articulo)";
+        VALUES (1,'Felipe',$articulo)";
