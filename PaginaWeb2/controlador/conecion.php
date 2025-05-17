@@ -1,11 +1,13 @@
 <?php
     require_once 'configuracion.php';
+    class Conexion{
     $host = BHOST;
     $usuario = BDUSER;
     $contrasena = BDCON;
     $baseDeDatos = BDNAME;
     $conexion;
-   try {
+  function conectar(){
+    try {
     $conn = new PDO("mysql;host=$host;baseDeDatos=$baseDeDatos",$usuario,$$contrasena);
    
     echo "conecion ok";
@@ -17,8 +19,11 @@
         echo $row['rol']."<br>";
         echo $row['numero_articulo']."<br>";
     }
-   }
+   
    catch(PDOException $E){
     echo "error de conecion".$E->getMessage();
-   }
+    return false;
+    }
+  }
+}
 ?>

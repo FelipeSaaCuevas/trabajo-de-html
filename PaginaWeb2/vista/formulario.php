@@ -12,13 +12,13 @@
 <div class="box has-text-centered has-background-light">
   <form action="http://localhost/PaginaWeb2/controlador/UsuarioController.php" method="post">
     <label>Nombre:</label>
-    <input type="text" name="nombre" required><br><br>
-     
+    <input type="text" name="nombre" pattern="[a-z]{10}"  minlength="4"  required><br><br>
+
     <label>Apellido:</label>
-    <input type="text" name="apellido" required><br><br>
+    <input type="text" name="apellido" pattern="[a-z]" minlength="4" maxlength="10" required><br><br>
 
     <label>Contraseña:</label>
-    <input type="password" name="contrasena" required><br><br>
+    <input type="password" name="contrasena" pattern="[a-zA-Z0-9 ]" minlength="6" maxlength="10" required title="su contraseña no es valida"><br><br>
 
     <label>Rol:</label>
     <select name="rol" required>

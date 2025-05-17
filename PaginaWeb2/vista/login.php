@@ -25,7 +25,7 @@
     <input type="hidden" name="accion" value="login">
 
     <label>Nombre de Usuario:</label>
-    <input type="text" name="nombre" required><br><br>
+    <input type="text" name="nombre" minlength="5" maxlength="10" required><br><br>
 
     <label>Contraseña:</label>
     <input type="password" name="contraseña" required><br><br>

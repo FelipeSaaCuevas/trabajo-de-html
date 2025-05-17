@@ -6,6 +6,7 @@
     <title>Formulario con localStorage</title>
     <link rel="stylesheet" href="StiloDePagina.css">
 
+
 </head>
 <body>
 <header class="barraSuperior">
@@ -25,10 +26,10 @@
             <h2>Formulario de Contacto</h2>
         
             <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nombre" required>
+            <input type="text" id="nombre" name="nombre" pattern="[a-zA-Z]" minlength="4" maxlength="10" required>
         
             <label for="mensaje">Mensaje:</label>
-            <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+            <textarea id="mensaje" name="mensaje" rows="5" required title="no a puesto escrito nada en el articulo"></textarea>
         
             <button type="submit">Enviar</button>
         </form>
